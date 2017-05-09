@@ -1,6 +1,6 @@
 {
   "name": "snowflake-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for working with snowflake database",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,6 @@
     "async": "^2.4.0",
     "debug": "^2.6.6",
     "lodash": "^4.17.4",
-    "moment": "^2.18.1",
     "redis": "^2.7.1",
     "snowflake-sdk": "^1.1.2"
   },

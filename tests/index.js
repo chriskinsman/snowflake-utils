@@ -44,7 +44,7 @@ Tests.SetCurrentDatabase = function SetCurrentDatabase(test) {
             snowflake.setCurrentDatabase(database, done);
         },
         function (done) {
-            cache.getFromCache('production', function (err, result) {
+            cache.getFromCache('snowshovel-utils:production', function (err, result) {
                 test.equal(result, database, 'Wrong value set');
                 done(err);
             });
@@ -59,7 +59,7 @@ Tests.GetCurrentDatabase = function GetCurrentDatabase(test) {
     const database = 'barfoo';
     async.series([
         function (done) {
-            cache.addValueToCache('production', database, done, 60);
+            cache.addValueToCache('snowshovel-utils:production', database, done, 60);
         },
         function (done) {
             snowflake.getCurrentDatabase(function (err, result) {

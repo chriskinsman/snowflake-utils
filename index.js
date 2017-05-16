@@ -5,7 +5,7 @@ const Cache = require('./lib/cache');
 const debug = require('debug')('snowflake-utils');
 const async = require('async');
 const snowflake = require('snowflake-sdk');
-const _production = 'production';
+const _production = 'snowshovel-utils:production';
 
 let Utils =  function (account, username, password, redisHost, redisPort) {
     this._cache = new Cache(redisHost, redisPort);
